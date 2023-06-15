@@ -1,2 +1,7 @@
 bar:
   default-response: bar bar bar yeah
+
+
+# Enable this for debugging Spring Context cache misses
+#logging.level:
+#  org.springframework.test.context.cache: DEBUG

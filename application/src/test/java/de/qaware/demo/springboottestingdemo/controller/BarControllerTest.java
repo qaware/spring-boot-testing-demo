@@ -1,7 +1,6 @@
 package de.qaware.demo.springboottestingdemo.controller;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
 import static org.hamcrest.Matchers.stringContainsInOrder;
 import static org.mockito.Mockito.verify;
@@ -9,7 +8,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(controllers = BarController.class)
 class BarControllerTest extends AbstractControllerTest {
 
     @Test
