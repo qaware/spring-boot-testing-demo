@@ -1,12 +1,8 @@
 package de.qaware.demo.springboottestingdemo.controller;
 
-import de.qaware.demo.springboottestingdemo.repository.BarRepository;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.TestPropertySource;
-import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.stringContainsInOrder;
 import static org.mockito.Mockito.verify;
@@ -16,13 +12,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(controllers = BarController.class)
 @TestPropertySource(properties = "bar.defaultResponse = bar bar bar yeah")
-class BarControllerTest {
-
-    @MockBean
-    private BarRepository barRepository;
-
-    @Autowired
-    private MockMvc mvc;
+class BarControllerTest extends AbstractControllerTest {
 
     @Test
     void getBarItems() throws Exception {
