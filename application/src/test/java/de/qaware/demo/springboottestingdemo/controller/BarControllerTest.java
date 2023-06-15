@@ -2,7 +2,6 @@ package de.qaware.demo.springboottestingdemo.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.TestPropertySource;
 
 import static org.hamcrest.Matchers.stringContainsInOrder;
 import static org.mockito.Mockito.verify;
@@ -11,7 +10,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(controllers = BarController.class)
-@TestPropertySource(properties = "bar.defaultResponse = bar bar bar yeah")
 class BarControllerTest extends AbstractControllerTest {
 
     @Test
