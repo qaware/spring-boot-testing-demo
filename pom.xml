@@ -22,7 +22,6 @@
     <modules>
         <module>controller</module>
         <module>application</module>
-        <module>repository</module>
     </modules>
 
     <dependencies>
